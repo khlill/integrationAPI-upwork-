@@ -1,0 +1,22 @@
+.input-group{
+    width: 100% !important;
+}
+
+#search-addon{
+    height: 40px !important;
+    
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+a.page-link{
+    color: rgb(11, 11, 49);
+}
+
+#buttons{
+    margin-left: 2%;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 0%;
+}
