@@ -2,11 +2,13 @@ import React from "react";
 import "./screen2a.css";
 import { NavLink } from "react-bootstrap";
 import Hamburger from 'hamburger-react'
-import {useState} from 'react';
+import { useState } from "react"
 import Swal from "sweetalert2";
 
 const Navbar = () => {
     const [click, setClick] = React.useState(false);
+    const [dropdown,setDropdown] = useState(false)
+
     const handle = event => {
       Swal.fire({
         title: 'Choose a file...',
@@ -36,14 +38,12 @@ const Navbar = () => {
       })
     };
     const handleClick = () => setClick(!click);
-    const Close = () => setClick(false);
+    const Close = () => setClick(false);    
+    const clickDrop = () => setDropdown(!dropdown)  
 
-    const [dropdown,setDropdown] = useState(false)
-    const clickDrop = () => setDropdown(!dropdown)
 
     return (
       <>
-     
       <div>
      <div className={click ? "main-container" : ""}  onClick={()=>Close()} />
       <nav className="navbar" onClick={e => e.stopPropagation()}>
